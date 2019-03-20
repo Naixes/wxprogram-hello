@@ -2,7 +2,7 @@
 const fetch = require('../../utils/fetch.js')
 Page({
   /**
-   * 页面的初始数据
+   * 页面的初始数据，不定义方法
    */
   data: {
     shopList: [],

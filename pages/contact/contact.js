@@ -8,6 +8,18 @@ Page({
 
   },
 
+  // 自定义方法
+  checkboxChangeHandler: function(event) {
+    console.log(event)
+  },
+  radioChangeHandler: function (event) {
+    console.log(event)
+    // 获取value
+    console.log(event.detail.value)
+    // 获取参数
+    console.log(event.target.dataset.index)
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

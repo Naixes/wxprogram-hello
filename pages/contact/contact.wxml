@@ -4,21 +4,46 @@
     <text>清除缓存</text>
   </navigator>
   <navigator class='cell-item arr'>
-    <text>清除缓存</text>
+    <text>表单</text>
   </navigator>
-  <navigator class='cell-item arr'>
-    <text>清除缓存</text>
-  </navigator>
+    <input class='cell-item' type='text' placeholder='text'/>
+    <input class='cell-item' type='text' password='' placeholder='password'/>
+    <input class='cell-item' type='number' placeholder='number'/>
+    <input class='cell-item' type='idcard' placeholder='idcard'/>
+    <input class='cell-item' type='digit' placeholder='digit'/>
+  
 </view>
 <view class='divider'></view>
 <view class="cell">
   <navigator class='cell-item arr'>
-    <text>清除缓存</text>
+    <text>其他表单元素</text>
   </navigator>
-  <navigator class='cell-item arr'>
-    <text>清除缓存</text>
-  </navigator>
-  <navigator class='cell-item arr'>
-    <text>清除缓存</text>
-  </navigator>
+  <checkbox-group class='cell-item' bindchange='checkboxChangeHandler'>
+    <checkbox color='#fbbc05'></checkbox>
+    <checkbox color='#fbbc05'></checkbox>
+  </checkbox-group>
+  <!-- 注意事件和参数都在group中 -->
+  <radio-group class='cell-item' bindchange='radioChangeHandler' data-index='1'>
+    <radio color='#fbbc05' value='male' checked>男</radio>
+    <radio color='#fbbc05' value='female'>女</radio>
+    <radio disabled>保密</radio>
+  </radio-group>
+
+  <view class='cell-item'>
+    <switch color='#fbbc05' checked></switch>
+  </view>
+
+  <view class='divider'></view>
+
+  <!-- wxs脚本 -->
+  <wxs module='foo'>
+  module.exports = function(a, b) {
+    return a + b
+  }
+  </wxs>
+  <view class='cell-item'>
+  wxs脚本的执行结果：
+    {{foo(1, 2)}}
+  </view>
+
 </view>

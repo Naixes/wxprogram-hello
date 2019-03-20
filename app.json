@@ -39,7 +39,7 @@
       },
       {
         "pagePath": "pages/contact/contact",
-        "text": "联系",
+        "text": "表单Demo",
         "iconPath": "/assets/tabs/contact.png",
         "selectedIconPath": "/assets/tabs/contact-active.png"
       }
