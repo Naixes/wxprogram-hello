@@ -1,0 +1,33 @@
+<!-- 轮播 -->
+<view class='slider'>
+  <!-- 轮播图 -->
+  <!-- 默认为false，或者设置{{false}}，不写属性值默认为true -->
+  <swiper indicator-dots='{{true}}' autoplay='{{true}}' duration='400' interval='2500' circular>
+    <swiper-item wx:for='{{slideList}}' wx:key='{{id}}'>
+      <image src='{{item.image}}' mode='aspectFill'></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+<!-- 导航 -->
+<view class='index-nav bgw'>
+  <!-- ?传递参数，option中获取 -->
+  <navigator class='nav-item br' wx:for='{{navList}}' wx:key='{{id}}' url='/pages/shopList/shopList?cat={{item.id}}&name={{item.name}}'>
+    <image src='{{item.icon}}'></image>
+    <text>{{item.name}}</text>
+  </navigator>
+</view>
+
+<view class='divider'></view>
+
+<!-- 入口 -->
+<view class='index-enter bgw'>
+  <navigator class='enter-item'>
+    <image src='/assets/images/link-01.png'>
+    </image>
+  </navigator>
+  <navigator class='enter-item'>
+    <image src='/assets/images/link-02.png'>
+    </image>
+  </navigator>
+</view>

@@ -1,0 +1,67 @@
+/* 轮播 */
+/* swiper默认高度150rpx */
+.slider,
+.slider swiper,
+.slider image {
+  /* 图片有默认的宽高 */
+  width: 100%;
+  /* 不能写auto，不会自动配适，rpx会自动计算 */
+  height: 390rpx;
+}
+
+/* 导航 */
+.index-nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+.nav-item {
+  /* 上下居中布局 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 200rpx;
+  width: 33.33%;
+  /* font-size不能写成rpx */
+  font-size: 14px;
+
+  /* 1，注意这里的单位rpx，部分边框重叠过粗 */
+  /* border: 1rpx solid #ccc; */
+  /* 2，修改如下，但是由于边框占用了实体位置，可能会出现对不齐的情况，可以使用伪元素+定位解决 */
+  border-bottom: 1rpx solid #ccc;
+  /* border-right: 1rpx solid #ccc; */
+  /* box-sizing: border-box; */
+}
+  /* 2，取消最后一列的右边框 */
+/* .nav-item:nth-child(3n) { */
+  /* border-right: 0; */
+/* } */
+/* 3，伪元素+定位，稳定 */
+/* 3，取消最后一列的右边框 */
+.nav-item:nth-child(3n)::after {
+  width: 0;
+}
+.nav-item image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+/* 入口 */
+.index-enter {
+  padding: 20rpx 30rpx;
+  display: flex;
+}
+.enter-item {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.enter-item image {
+  width:320rpx;
+  height: 178rpx;
+}
+
+/* 分区间的间隔，方法1：设置page和分区的背景色，margin隔开 */
+/* 方法2：封装样式类 */
+/* 方法3：封装一个间隔类 */

@@ -1,0 +1,33 @@
+<view class="shop">
+  <image mode='aspectFill' class='shop-img'  src='//p1.meituan.net/200.0/deal/35bef73b777ac0ab61921fe8228bfe9e47775.jpg@128_0_385_385a%7C267h_267w_2e_90Q'></image>
+  <view class='shop-info'>
+    <text class='shop-name text-ellipsis'>测试：店铺名称很长很长很长很长很长很长</text>
+    <text>电话：</text>
+    <text>地址：</text>
+    <text>营业时间：</text>
+  </view>
+  <view class='shop-star'>
+    <view class='star-before' style='width:70%'>★★★★★</view>
+    <view class='star-after'>★★★★★</view>
+  </view>
+</view>
+<view class="shop" wx:for='{{shopList}}' wx:key='id'>
+  <image class='shop-img' mode='aspectFill' src='{{item.images[0]}}'></image>
+  <view class='shop-info'>
+    <text class='shop-name text-ellipsis'>{{item.name}}</text>
+    <text>电话：{{item.phone}}</text>
+    <text class='shop-address'>地址：{{item.address}}</text>
+    <text>营业时间：{{item.businessHours}}</text>
+  </view>
+  <view class='shop-star'>
+    <view class='star-before' style='width:{{item.score}}%'>★★★★★</view>
+    <view class='star-after'>★★★★★</view>
+  </view>
+</view>
+
+<view class='bottom-loading' wx:if='{{hasData}}'>
+  <text>正在加载..</text>
+</view>
+<view class='bottom-loading' wx:else>
+  <text>已经到底啦</text>
+</view>

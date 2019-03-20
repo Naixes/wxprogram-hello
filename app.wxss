@@ -1,0 +1,81 @@
+page {
+  background-color: #f1f1f1;
+}
+/* 封装样式类 */
+.bgw {
+  background-color: #fff;
+}
+.mt {
+  margin-top: 20rpx;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 封装间隔类 */
+.divider {
+  height: 20rpx;
+  background-color: #f1f1f1;
+}
+/* 细线边框封装 */
+.br {
+  position: relative;
+}
+.br::after {
+  content: "";
+  
+  width: 1rpx;
+  height: 100%;
+  background-color: #ccc;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* 封装详情箭头 */
+.arr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.arr::after {
+  content: "";
+  width: 15rpx;
+  height: 15rpx;
+
+  border-top: 1rpx solid #ccc;
+  border-right: 1rpx solid #ccc;
+  transform: rotate(45deg);
+  display: block;
+}
+/* 列表封装 */
+.cell {
+  font-size: 14px;
+}
+.cell-item {
+  background-color: white;
+  padding: 20rpx 30rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+/* 将评星绝对定位到右上角 */
+.shop-star {
+  position: absolute;
+  top: 25rpx;
+  right: 20rpx;
+}
+.star-after {
+  color: #e2e2e2;
+}
+.star-before {
+  color: #fbbc05;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* 文字超出省略 */
+.text-ellipsis{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis; 
+}

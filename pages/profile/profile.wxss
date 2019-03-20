@@ -1,0 +1,10 @@
+.avatar {
+  height: 400rpx;
+  background-color: #fbbc05;
+}
+.avatar image {
+  height: 200rpx;
+  width: 200rpx;
+  border: 10rpx solid rgba(0, 0, 0, .2);
+  border-radius: 50%;
+}
