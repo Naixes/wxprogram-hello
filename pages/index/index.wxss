@@ -21,7 +21,7 @@
   justify-content: center;
   align-items: center;
 
-  height: 200rpx;
+  height: 170rpx;
   width: 33.33%;
   /* font-size不能写成rpx */
   font-size: 14px;
@@ -43,13 +43,13 @@
   width: 0;
 }
 .nav-item image {
-  width: 80rpx;
-  height: 80rpx;
+  width: 70rpx;
+  height: 70rpx;
 }
 
 /* 入口 */
 .index-enter {
-  padding: 20rpx 30rpx;
+  padding: 16rpx 30rpx;
   display: flex;
 }
 .enter-item {
@@ -58,8 +58,8 @@
   justify-content: center;
 }
 .enter-item image {
-  width:320rpx;
-  height: 178rpx;
+  width:280rpx;
+  height: 150rpx;
 }
 
 /* 分区间的间隔，方法1：设置page和分区的背景色，margin隔开 */
